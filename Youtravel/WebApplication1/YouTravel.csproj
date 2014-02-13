@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A0C1861-4819-40B9-B311-C05BBCA32876}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\PayPalDB.mdf" />
+    <Content Include="Images3\Destimage\Afri.png" />
+    <Content Include="Images3\Destimage\Antarc.png" />
+    <Content Include="Images3\Destimage\Asia.png" />
+    <Content Include="Images3\Destimage\Aust.png" />
+    <Content Include="Images3\Destimage\ButtonClosingX.png" />
+    <Content Include="Images3\Destimage\ButtonCountries.png" />
+    <Content Include="Images3\Destimage\ButtonCountriesAnt.png" />
+    <Content Include="Images3\Destimage\ButtonCountriesDyn.png" />
+    <Content Include="Images3\Destimage\EU.png" />
+    <Content Include="Images3\Destimage\NA.png" />
+    <Content Include="Images3\Destimage\OpacityBackG.png" />
+    <Content Include="Images3\Destimage\SA.png" />
+    <Content Include="Images3\SignIn.png" />
+    <Content Include="UserPages\ChangePassword.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Images3\PayPalImages\ButtonPP.png" />
+    <Content Include="Images3\PayPalImages\ButtonPPDonate.png" />
+    <Content Include="Images3\PayPalImages\PayPal00.png" />
+    <Content Include="PayPal.aspx" />
+    <Content Include="PayPalConfirmation.aspx" />
+    <Content Include="App_Data\PayPalDB_log.LDF">
+      <DependentUpon>PayPalDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\advertisement.xml" />
+    <Content Include="App_Data\YouTravelDatabase.mdf" />
+    <Content Include="App_Data\YouTravelDatabase_log.ldf">
+      <DependentUpon>YouTravelDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Country.aspx" />
+    <Content Include="Destinations.aspx" />
+    <Content Include="Images3\british.jpg" />
+    <Content Include="Images3\Destimage\MapAntShrt.png" />
+    <Content Include="Images3\England\Beaches\bude cornwall.jpg" />
+    <Content Include="Images3\England\Beaches\durdle-door-lulworth.jpg" />
+    <Content Include="Images3\England\Beaches\swanpool beach.jpg" />
+    <Content Include="Images3\England\Beaches\woolacombe bay.jpg" />
+    <Content Include="Images3\England\Monuments\big ben.jpg" />
+    <Content Include="Images3\England\Monuments\leeds castle.jpg" />
+    <Content Include="Images3\England\Monuments\stonehenge.jpg" />
+    <Content Include="Images3\England\Natural Parks\cotter force wensleydale yorkshire dales.jpg" />
+    <Content Include="Images3\England\Natural Parks\dartmoor.jpg" />
+    <Content Include="Images3\England\Natural Parks\exmoor.jpg" />
+    <Content Include="Images3\England\Natural Parks\pond.jpg" />
+    <Content Include="Images3\England\Natural Parks\snowdonia.jpg" />
+    <Content Include="Images3\France\Beaches\biarritz.jpg" />
+    <Content Include="Images3\France\Beaches\cote d%27azur.jpg" />
+    <Content Include="Images3\France\Beaches\marseille.jpg" />
+    <Content Include="Images3\France\Monuments\eiffel tower.jpg" />
+    <Content Include="Images3\France\Monuments\louvre.jpg" />
+    <Content Include="Images3\France\Monuments\sacre coeur.jpg" />
+    <Content Include="Images3\France\Monuments\versailles.jpg" />
+    <Content Include="Images3\France\Natural Parks\bauges.jpg" />
+    <Content Include="Images3\France\Natural Parks\canon du verdon.jpg" />
+    <Content Include="Images3\France\Natural Parks\gros morne.jpg" />
+    <Content Include="Images3\France\Natural Parks\verdon.jpg" />
+    <Content Include="Images3\french.png" />
+    <Content Include="Images3\Greece\Beaches\egremni-lefkada.jpg" />
+    <Content Include="Images3\Greece\Beaches\ithaca.jpg" />
+    <Content Include="Images3\Greece\Beaches\platis gialos.jpg" />
+    <Content Include="Images3\Greece\Monuments\parthnon.jpg" />
+    <Content Include="Images3\Greece\Monuments\soldier monument.jpg" />
+    <Content Include="Images3\Greece\Monuments\temple in athens.jpg" />
+    <Content Include="Images3\Greece\Monuments\Temple of zeus.jpg" />
+    <Content Include="Images3\Greece\Monuments\unkown.jpg" />
+    <Content Include="Images3\Greece\Natural Parks\olympic.jpg" />
+    <Content Include="Images3\Greece\Natural Parks\parnassos.jpg" />
+    <Content Include="Images3\Greece\Natural Parks\samaria gorge.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa1.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa10.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa2.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa3.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa4.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa5.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa6.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa7.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa8.jpg" />
+    <Content Include="Images3\Spain\Beaches\playa9.jpg" />
+    <Content Include="Images3\Spain\Monuments\acueducto de segovia.jpg" />
+    <Content Include="Images3\Spain\Monuments\Alhambra.jpg" />
+    <Content Include="Images3\Spain\Monuments\catedral de palma.jpg" />
+    <Content Include="Images3\Spain\Monuments\El retiro.jpg" />
+    <Content Include="Images3\Spain\Monuments\giralda de sevilla.jpg" />
+    <Content Include="Images3\Spain\Monuments\la fuente magica.jpg" />
+    <Content Include="Images3\Spain\Monuments\museo de las artes y las ciencias.jpg" />
+    <Content Include="Images3\Spain\Monuments\palacio-real-Madrid.jpg" />
+    <Content Include="Images3\Spain\Monuments\sagrada familia.jpg" />
+    <Content Include="Images3\Spain\Monuments\teatro romano merida.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Aigüestortes.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Archipielago Cabrera.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Cabañeros.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Caldera del Tabuire.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Corona Forestal.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Doñana.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Garajonay.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Islas Atlánticas.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Monfragüe.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Ordesa.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Picos de Europa.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Sierra Nevada.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Tablas de Daimiel.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Teide.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Timanfaya.jpg" />
+    <Content Include="Images3\Spain\Natural Parks\Valderejo.jpg" />
+    <Content Include="Images3\spanish.jpg" />
+    <Content Include="Images3\top.jpg" />
+    <Content Include="Images3\bottom.jpg" />
+    <Content Include="Images3\cascada.jpg" />
+    <Content Include="Images3\castillo.jpg" />
+    <Content Include="Images3\lago.jpg" />
+    <Content Include="Images3\playa.jpg" />
+    <Content Include="Images3\Top10\Amsterdam.gif" />
+    <Content Include="Images3\Top10\Barcelona.gif" />
+    <Content Include="Images3\Top10\Berlin.gif" />
+    <Content Include="Images3\Top10\Dublin.gif" />
+    <Content Include="Images3\Top10\Firenze.gif" />
+    <Content Include="Images3\Top10\Istanbul.gif" />
+    <Content Include="Images3\Top10\London.gif" />
+    <Content Include="Images3\Top10\Paris.gif" />
+    <Content Include="Images3\Top10\Praga.gif" />
+    <Content Include="Images3\Top10\Venise.gif" />
+    <Content Include="UserPages\UserInfo.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Images3\taj_mahal.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="UserPages\UserMain.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="City.aspx" />
+    <Content Include="Top10.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="UserPages\MyTrips.aspx" />
+    <Content Include="UserPages\AddTrip.aspx" />
+    <Content Include="UserPages\AddFavorite.aspx" />
+    <Content Include="Restricted.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserPages\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayPal.aspx.cs">
+      <DependentUpon>PayPal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayPal.aspx.designer.cs">
+      <DependentUpon>PayPal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayPalConfirmation.aspx.cs">
+      <DependentUpon>PayPalConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayPalConfirmation.aspx.designer.cs">
+      <DependentUpon>PayPalConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Destinations.aspx.cs">
+      <DependentUpon>Destinations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Destinations.aspx.designer.cs">
+      <DependentUpon>Destinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPages\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\UserMain.aspx.cs">
+      <DependentUpon>UserMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\UserMain.aspx.designer.cs">
+      <DependentUpon>UserMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="City.aspx.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="City.aspx.designer.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top10.aspx.cs">
+      <DependentUpon>Top10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Top10.aspx.designer.cs">
+      <DependentUpon>Top10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\MyTrips.aspx.cs">
+      <DependentUpon>MyTrips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\MyTrips.aspx.designer.cs">
+      <DependentUpon>MyTrips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\AddTrip.aspx.cs">
+      <DependentUpon>AddTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\AddTrip.aspx.designer.cs">
+      <DependentUpon>AddTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\AddFavorite.aspx.cs">
+      <DependentUpon>AddFavorite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\AddFavorite.aspx.designer.cs">
+      <DependentUpon>AddFavorite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restricted.aspx.cs">
+      <DependentUpon>Restricted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restricted.aspx.designer.cs">
+      <DependentUpon>Restricted.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YouTravelClassLibrary\YouTravelClassLibrary.csproj">
+      <Project>{7CC6ECBB-73E4-49B9-B4C6-7854B12877BB}</Project>
+      <Name>YouTravelClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Skin01\Skin01.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2498</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

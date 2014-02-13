@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Images3/cascada.jpg</ImageUrl>
+    <height>30</height>
+    <width>30</width>
+    <NavigateUrl>~/Main.aspx</NavigateUrl>
+    <AlternateText>Go to home</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Topic1</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images3/taj_mahal.jpg</ImageUrl>
+    <height>30</height>
+    <width>30</width>
+    <NavigateUrl>~/Main.aspx</NavigateUrl>
+    <AlternateText>Go to home page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Topic2</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images3/playa.jpg</ImageUrl>
+    <height>30</height>
+    <width>30</width>
+    <NavigateUrl>~/Main.aspx</NavigateUrl>
+    <AlternateText>Go to home</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Topic3</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images3/lago.jpg</ImageUrl>
+    <height>30</height>
+    <width>30</width>
+    <NavigateUrl>~/Main.aspx</NavigateUrl>
+    <AlternateText>Go to home page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Topic4</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images3/castillo.jpg</ImageUrl>
+    <height>30</height>
+    <width>30</width>
+    <NavigateUrl>~/Main.aspx</NavigateUrl>
+    <AlternateText>Go to home page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Topic5</Keyword>
+  </Ad>
+</Advertisements>

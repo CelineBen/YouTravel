@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Import Namespace="System.Web.Security" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--<script runat="server">
+
+public void LogoutLink_OnClick(object sender, EventArgs args)
+{
+  FormsAuthentication.SignOut();
+  FormsAuthentication.RedirectToLoginPage();
+}
+
+</script>-->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>YouTravel</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div id="header">
+            
+            <div id="container">
+
+                <!-- WebApp Title-->
+                <h1> YouTravel </h1>
+
+                <!-- List with 3 flags (British, French, Spanish)-->
+                <ul class="language" dir="ltr">
+                <li>
+                    <a href="">
+                        <asp:ImageButton ID="LanguageBritish" runat="server" ImageUrl="~/Images3/british.jpg" AlternateText="English"
+                        Height="15" Width="20" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <asp:Image ID="LanguageFrench" runat="server" ImageUrl="~/Images3/french.png" AlternateText="Francais"
+                        Height="15" Width="20" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <asp:Image ID="LanguageSpanish" runat="server" ImageUrl="~/Images3/spanish.jpg" AlternateText="Espanol"
+                        Height="15" Width="20" />
+                    </a>
+                </li>
+                </ul> 
+
+                <!-- Menu Principal (Home, Destinations, Top 10, Contact Us) -->
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                        EnableViewState="false" Orientation="Horizontal" 
+                        Font-Bold="True" Font-Size="Large">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Main.aspx" Text="Home" Value="home"/>
+                            <asp:MenuItem NavigateUrl="~/Destinations.aspx" Text="Destinations" Value="Cities"/>
+                            <asp:MenuItem NavigateUrl="~/Top10.aspx" Text="Top 10" Value="Top 10"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact us" Value="Contact us"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle BorderStyle="None"/>
+                    </asp:Menu>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <!-- Get content in the middle of the page -->
+            <!-- <div id="content-centered"> -->
+            <div id="content-centered">
+                <!-- Side Bar with Login + any info -->
+                <asp:Panel ID="SideBar" runat="server" CssClass="sideBar">
+                    <div id="login">
+                        <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/UserPages/UserMain.aspx" 
+                                        Orientation="Vertical" RememberMeText="Remember me." 
+                                        TextLayout="TextOnTop" TitleText="" LoginButtonText="Sign in" 
+                                PasswordLabelText="Password:" UserNameLabelText="Username:" 
+                                LoginButtonStyle-CssClass="button" onauthenticate="Login1_Authenticate">
+                                <CheckBoxStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                <LoginButtonStyle Font-Bold="True" />
+                            </asp:Login>
+                            <asp:Label ID="Label1" runat="server" Text="Label">Do not have an account yet? </asp:Label>
+                            <asp:HyperLink ID="Register" runat="server" NavigateUrl="~/Register.aspx" Font-Bold="True" ForeColor="#0033CC">Register</asp:HyperLink>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>Welcome, <b><%=HttpContext.Current.User.Identity.Name%></b>.<br />You are now 
+                                logged into your account.</p>
+                            <div class="PrivateMenu">
+            <asp:Menu ID="Menu1" CssClass="menuUser" runat="server" Orientation="Vertical">
+                <Items>           
+                    <asp:MenuItem Text="Profile" Value="Profile" NavigateUrl="UserPages/UserMain.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Account" Value="Account" NavigateUrl="UserPages/UserInfo.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Password" Value="Password" NavigateUrl="UserPages/ChangePassword.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Favorite" Value="Favorite" NavigateUrl="UserPages/AddFavorite.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="My Trips" Value="Travels" NavigateUrl="UserPages/MyTrips.aspx"></asp:MenuItem>               
+                </Items>
+            </asp:Menu>
+            <asp:Button ID="LogoutButton" runat="server" Text="Logout" CssClass="button" OnClick="LogoutLink_OnClick"/>
+        </div>  
+        </LoggedInTemplate>
+                    </asp:LoginView>
+                    </div>               
+
+                    <!-- Content Holder for side bar -->
+                    <div id="sideBarContent">
+                    <asp:ContentPlaceHolder ID="MenuContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    </div>
+
+                    <!-- Content Holder for Twitter Extension -->
+                    <div id="twitter">
+                        <asp:Twitter ID="Twitter" runat="server" Mode="Profile" ScreenName="youTravel1" 
+                        Width="200px" Title="Follow us" Caption="YouTravel" BackColor="#ECE3D8" 
+                            BorderColor="#ED8700" BorderStyle="Solid" BorderWidth="1px">
+                        </asp:Twitter>
+                        <br/>
+                   <asp:Button ID="Button1" runat="server" Text="DONATE"  onclick="Button1_Click1" CssClass="SiteMasterDONATE" />
+                    </div>
+
+                </asp:Panel>
+                <asp:RoundedCornersExtender ID="RoundedCornersExtender3" runat="server"
+                TargetControlID="SideBar" Radius="20" Corners="All" BorderColor="Gray">
+                </asp:RoundedCornersExtender>
+
+                <!-- Content Holder for the main part of the page -->
+                <asp:Panel ID="ContentPanel" runat="server" CssClass="MainPanel">
+                <div id="main_content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                </asp:Panel>
+                <asp:RoundedCornersExtender ID="RoundedCornersExtender2" runat="server"
+                    TargetControlID="ContentPanel" Radius="20" Corners="All" BorderColor="Gray">
+                </asp:RoundedCornersExtender>
+
+                <div class="clear">
+                </div>
+
+                
+                </div>
+                
+        </div>
+        
+        
+        <div id="footer"> 
+            <p><strong>Copyright</strong></p>     
+        </div>
+
+    </form>
+</body>
+</html>

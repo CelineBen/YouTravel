@@ -1,0 +1,936 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+html, body {
+    margin: 0;
+    padding: 0;   
+}
+
+body 
+{
+    color: #444444;
+    background-color: #F3F3E8;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+a:link, a:visited
+{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a:active
+{
+    color: #ED8700;
+}
+
+p
+{
+    /*margin-bottom: 10px;
+    line-height: 1.6em;
+    height: 177px;
+    width: 621px;*/
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #666666;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    
+}
+
+h2
+{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder; 
+    margin: 20px 60px;
+    padding: 20px 30px;
+    border-bottom: 3px solid #ED8700;
+}
+
+h3
+{
+    color: #ED8700;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder; 
+    padding: 0px 10px 20px 10px;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+#header {
+    /*background: url("/Images3/t.jpg") repeat-x scroll center top #ECE3D8;*/
+    background-color: #ECE3D8;
+    border-bottom: 4px solid #ED8700;
+    position: relative;    
+}
+
+#container
+{
+    margin: 0 auto;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    width: 900px;
+    height: 80px;
+}
+#content
+{
+    position: relative;
+    /*z-index: 1px; <-- Cause problems with AJAX ModalPopUp*/ 
+}
+#content-centered
+{
+    margin: 20px auto;
+    width: 900px;
+}
+.sideBar
+{
+    float: left;
+    width: 270px;
+    background-color: White;
+    margin: 0px 10px;
+}
+#login, #sideBarContent, #twitter
+{   
+    font-size: 1.1em;
+    margin: 0px auto 10px auto;
+    width: 200px;
+    padding: 10px 20px 20px 20px;
+    /*border-bottom: 1px solid black;*/
+}
+#login
+{   
+    border-bottom: 1px solid black;
+}
+.MainPanel
+{
+    background-color: White;
+    margin: 0px auto;
+    width: 600px;
+    display: inline-block;
+    position: inherit;
+}
+.subcontent
+{
+    margin: 40px 20px;
+}
+.clear
+{
+    clear: both;
+}
+
+#footer
+{
+    color: #4e5766;
+    background-color: #ECE3D8;
+    border-top: 4px solid #ED8700;
+    padding: 0.5px 0px 0.5px 0px;
+    text-align: center;
+    line-height: normal;
+}
+.button
+{
+    /*background-color: #F3F3E8;
+    border: 1px solid #ED8700;*/
+    margin: 20px;
+    border: none;
+    width: 66px;
+    height: 23px;
+    background-position: center center;
+    background-image: url('../Images3/SignIn.png');
+    background-repeat: no-repeat;    
+    cursor: pointer;
+}
+
+
+/* TOP BAR
+----------------------------------------------------------*/
+
+#header h1
+{
+    border-color: inherit;
+    border-width: medium;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px 0px 20px 20px;
+    color: #404040;
+    line-height: 1.7em;
+    font-size: 50px;
+}
+
+.language {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    padding: 0;
+    width: 161px;
+}
+
+.language li
+{
+    display: block;
+    float: left;
+    padding: 0 0.5em;
+}
+
+div.hideSkiplink
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 600px;    
+}
+div.menu
+{
+    padding: 4px 0px 0px 0px;
+}
+
+div.menu ul
+{
+    list-style: none outside none;
+    text-align: center;
+}
+div.menu ul li a, div.menu ul li a:visited
+{
+    color: #666666;
+    display: block;
+    line-height: 1.35em;
+    padding: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 130px;
+}
+div.menu ul li a:hover
+{
+    background-color: #F3F3E8;
+    color: #465c71;
+    text-decoration: none;
+}
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* SIDE BAR
+----------------------------------------------------------*/
+
+/* LOGIN DISPLAY */
+
+.register a:link a:visited a:hover;
+{
+    color: Blue;
+}
+.register a:hover;
+{
+    text-decoration: underlined;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+/* USER MENU */
+
+div.menuUser
+{
+    padding: 0px 10px;
+}
+div.menuUser ul li a, div.menuUser ul li a:visited
+{
+    font-size: medium;
+    color: #444444;
+}
+div.menuUser a:hover
+{
+    color: #444444;
+    font-weight: bold;
+}
+
+/* HOME PAGE 
+----------------------------------------------------------*/
+.style2
+{
+    text-align: left;
+    margin: 30px 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;    
+    border-bottom: 1px solid black;
+}
+
+/* TOP 10
+----------------------------------------------------------*/
+.element
+{
+    margin: 50px 0px;
+}
+
+.elementTitle
+{
+    border-bottom: 3px solid #ED8700;
+}
+.elementTitle span
+{
+    background-color: #ED8700;
+    color: #000;
+    font: bold 2em Arial,sans-serif;
+    padding: 0 10px;
+}
+
+.elementTitle a 
+{
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0 10px 0 40px;
+}
+
+.elementContent
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.elementPhoto
+{
+    width: 550px;
+    padding: 10px 0px;
+}
+
+.elementContent .more
+{
+    text-align: right;
+}
+
+/* CONTACT US
+----------------------------------------------------------*/
+.contactus
+{
+    padding: 20px;
+}
+.contact
+{
+    padding: 10px 60px;
+}
+.contactlabel
+{
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+}
+.contacttext
+{
+    display: block;
+}
+
+/* COUNTRY PAGE 
+----------------------------------------------------------*/
+.cities
+{
+    text-align: left;
+    margin: 0px 20px;
+    padding: 5px 0px;
+}
+.mostvisited
+{
+    padding: 30px;
+}
+.visit, .visit li
+{
+    display: inline;
+    list-style-type: none;
+    padding: 2px; 
+}
+
+/* CITY PAGE 
+----------------------------------------------------------*/
+.right h2
+{
+    text-align: center;
+    font-size: xx-large;
+    padding: 0px 0px 20px 0px; 
+}
+.more
+{
+    font-size: small;
+    text-align: right;
+}
+.wheretogo
+{
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    list-style-type: decimal;
+    font-size: small; 
+}
+/*--- MY TRIPS ---*/
+.destCountry, .destCity
+{   
+    display: inline-block;
+    margin: 5px;
+}
+
+/* ---------------------------------------------------------------- Destinations CSS2.1 ---------------------------------------------------------------- */
+div.ContainerDest
+{    
+    position: relative;
+    width: 600px;    
+    height: 397px;
+    margin: 0;
+    padding: 0;    
+    display: block;
+    top:25px;
+}
+
+.bttContEU , .bttContNA, .bttContSA, .bttContAf, .bttContAsi, .bttContAus, .bttContAnt
+{   
+   width: 15px; 
+   height: 15px;     
+   display: block; 
+   position: absolute; 
+}
+
+.bttContEU
+{
+    top: 30px; 
+    left: 307px; 
+}
+
+.bttContNA{
+    top: 37px;
+    left: 72px;
+}
+
+.bttContSA{
+    top: 198px;
+    left: 130px;
+}
+.bttContAf{
+    top: 107px;
+    left: 253px;
+}
+.bttContAsi{
+    top: 31px;
+    left: 405px;
+}
+.bttContAus{
+    top: 195px;
+    left: 478px;
+}
+.bttContAnt{
+    top: 317px;
+    left: 240px;
+}
+
+ul#continents
+{
+    list-style: none;
+    position: absolute;
+    width: 600px;
+    height: 343px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images3/Destimage/MapAntShrt.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+ul#continents li {
+	
+	position: absolute;    
+}
+
+ul#continents li a{
+	display: block;
+	height: 100%;
+	text-decoration:none;
+	/*text-indent: -9000px;*/
+}
+
+ul#continents li a:hover
+{
+    background-image: url('../Images3/Destimage/MapAntShrt.png');
+}
+#northamerica {
+	width: 230px;
+	height: 148px;
+	top: 6px;
+	left: 12px;
+}
+/* background-position: x y;*/
+ul#continents li#northamerica a:hover
+{
+    background-position: -17px 339.5px;
+}
+
+#southamerica {
+	width: 107px;
+	height: 142px;
+	top: 138px;
+	left: 91px;
+}
+ul#continents li#southamerica a:hover {
+	background-position: 348px 345px;
+}
+
+#australia {
+	width: 140px;
+	height: 95px;
+	top: 172px;
+	left: 440px;
+}
+ul#continents li#australia a:hover {
+	background-position: 144px -552px;
+}
+#africa {
+	width: 137px;
+	height: 157px;
+	top: 86px;
+	left: 211px;
+}
+ul#continents li#africa a:hover {
+	background-position: -1px 184px;
+}
+
+#europe {
+	width: 129px;
+	height: 87px;
+	top: 7px;
+	left: 220px;
+}
+ul#continents li#europe a:hover {
+	background-position: 407.5px -532.5px;
+}
+
+#asia {
+	width: 220px;
+	height: 180px;
+	top: 7px;
+	left: 293px;
+}
+ul#continents li#asia a:hover {
+	background-position: 232px 338.5px;
+}
+
+#antarctic {
+	width: 400px;
+	height: 54px;
+	top: 298px;
+	left: 72px;
+}
+ul#continents li#antarctic a:hover {
+	background-position: -127.5px 50.5px;
+}
+
+/* ----------- From other page---------------*/
+
+ p#hEU /*DestEurope Head Format*/
+{
+    font-family: 'Times New Roman', Times, serif; 
+    font-weight: bold; 
+    font-size: 18pt; 
+    color: #000000; 
+    text-transform: capitalize;    
+}  
+
+/* --------------------- Modifying Columns --------------------- */
+
+ul#col1, ul#col2, ul#col3, ul#col4, ul#col5, ul#col6, ul#col7
+{    
+    text-decoration: none;
+    width: 171px;
+    font: 12pt Arial, Helvetica, sans-serif;    
+    height: 5px;   
+    left:0px;  
+}
+
+/* I'm using class because the object col1 and col2 can't use li if it's declare as li#row */  
+li.row
+{    
+    position: relative; /*If Absolute All cells'll be in the same position*/
+    width: 245px;
+    height: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 15px;
+    text-decoration: blink;
+    font: 16pt 'Times New Roman' , Times, serif;
+    list-style: none; /*removes the bullets*/
+    top: -25px;
+    left: -15px;
+    background-image: url('../Images3/Destimage/ButtonCountries.png');
+    background-repeat: no-repeat;
+    text-decoration: none;
+}  
+ul#col7 li.row
+{
+    background-image: url('../Images3/Destimage/ButtonCountriesAnt.png');
+    background-repeat: no-repeat;
+    text-decoration: none;    
+    width: 415px;
+}
+/* ----------------------The Order is Important --------------------- */
+ul#col1 li.row a:link, ul#col2 li.row a:link,
+ul#col3 li.row a:link, ul#col4 li.row a:link,
+ul#col5 li.row a:link, ul#col6 li.row a:link,
+ul#col7 li.row a:link
+{color: White}
+ul#col1 li.row a:visited, ul#col2 li.row a:visited, 
+ul#col3 li.row a:visited, ul#col4 li.row a:visited, 
+ul#col5 li.row a:visited, ul#col6 li.row a:visited, 
+ul#col7 li.row a:visited
+{color: #009933;}
+ul#col1 li.row a:hover, ul#col2 li.row a:hover, 
+ul#col3 li.row a:hover, ul#col4 li.row a:hover, 
+ul#col5 li.row a:hover, ul#col6 li.row a:hover, 
+ul#col7 li.row a:hover
+{
+    color: #00FF00;
+    text-decoration: none;
+/*    background-image: url('../Images3/Destimage/ButtonCountriesDyn.png');
+    background-position: center;
+    background-repeat: no-repeat;*/
+}
+ul#col1 li.row a:active, ul#col2 li.row a:active, /* active links */
+ul#col3 li.row a:active, ul#col4 li.row a:active,
+ul#col5 li.row a:active, ul#col6 li.row a:active,
+ul#col7 li.row a:active
+{color: Lime}
+/* -------------------EndThe Order is Important --------------------- */
+
+/* --------------------- EndModifying Columns --------------------- */
+
+#DestMenues
+{
+    background-color: #FFFBD6;
+    font-family: verdana;
+    font-size: 0.8em;
+    color: #F33E01;
+}
+
+.AJAXbuttonEU {background-image: url('../Images3/Destimage/OpacityBackG.png');}
+
+.ClosingX
+{
+    vertical-align: middle;    
+    background-image: url('../Images3/Destimage/ButtonClosingX.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+div.PnlbttnClX
+{
+    position: relative; 
+    display: block; 
+    width: 30px; 
+    height: 30px; 
+    top: -12px; 
+    left: 482px; 
+    cursor: text;    
+}
+
+.PanelclassNA, .PanelclassSA, .PanelclassEU, 
+.PanelclassAf, .PanelclassAsi, .PanelclassAus, 
+.PanelclassAnt
+{
+    width: 500px;
+    height: 331px; /* The Positions is being given by the AJAX controler X and Y*/    
+    background-repeat: no-repeat;    
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;    
+}
+.PanelclassNA
+{
+    background-image: url('../Images3/Destimage/NA.png');
+}
+
+.PanelclassSA
+{
+    background-image: url('../Images3/Destimage/SA.png');
+}
+
+.PanelclassEU
+{
+    background-image: url('../Images3/Destimage/EU.png');
+}
+
+.PanelclassAf
+{ 
+    background-image: url('../Images3/Destimage/Afri.png');
+}
+
+.PanelclassAsi
+{
+    background-image: url('../Images3/Destimage/Asia.png');
+}
+
+.PanelclassAus
+{ 
+    background-image: url('../Images3/Destimage/Aust.png');
+}
+
+.PanelclassAnt
+{
+    background-image: url('../Images3/Destimage/Antarc.png');
+}
+/* ---------------------------------------------------------------- EndDestinations ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- PayPal ---------------------------------------------------------------- */
+.focusing:focus
+{
+    background: #FFAAAA;
+}
+
+.PANELMasterPP
+{
+    padding: 10px;
+    margin: 10px;
+    background-color: #F0F0F0;
+    height: 600px;
+}
+
+/*div > p:first-child /* 5 Selectors 
+{ 
+    display: block;
+    position: relative;
+    top: 10px;
+    width: 500px;
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    left: 40px;
+}*/
+
+div.paypalP
+{ 
+    display: block;
+    position: relative;
+    top: 10px;
+    width: 500px;
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    left: 40px;
+}
+.PPPanel1, .PPPanel2, .PPPanel3
+{
+    display: block; 
+    position: relative;     
+}    
+.PPPanel1
+{
+    top: 140px; 
+    left:15px; 
+    width: 230px;
+    Height:40px;
+}
+.PPPanel2
+{
+    top: 150px; 
+    left: 7px;     
+    width: 498px;
+    height: 65px;
+}
+.PPPanel3
+{
+    top: 140px;
+    left: 7px; /*float: left; */
+    width: 498px;
+    height: 50px;
+    vertical-align: 5px;
+}
+
+.PPRadioButtonList1
+{
+    display: block; 
+    position: relative; 
+    top: 121px; 
+    left: 13px; 
+    background-color: #F0F0F0;
+}
+
+
+.PPRegularExpressionValidator1, .PPRegularExpressionValidator2, 
+.PPRegularExpressionValidator3, .PPRegularExpressionValidator4, .CCErrorRadioBttn
+{
+    display: block;
+    position: relative;
+    color: #FF0000;    
+}    
+.PPRegularExpressionValidator1
+{
+    top: 70px;
+    left: 95px;
+    width: 210px;
+    height: 20px;
+    z-index: 20;
+}
+.PPRegularExpressionValidator2
+{
+    top: 50px;
+    left: 355px;
+    width: 62px;
+    height: 20px;    
+}
+.PPRegularExpressionValidator3
+{
+    top: 85px;
+    left: 34px;
+    width: 144px;
+    height: 20px;    
+    z-index: 10;
+}
+.PPRegularExpressionValidator4
+{
+    top: 70px;
+    left: 55px;
+    width: 260px;
+    height: 20px;    
+}
+
+.CCErrorRadioBttn
+{
+    width: 250px;
+    height: 20px; 
+    top: -10px; 
+    left: 17px;  
+    z-index: 15;          
+}
+
+.EMPTYCELL1, .EMPTYCELL2, .EMPTYCELL3, .EMPTYCELL4 /* class selector is included in selectors */
+{
+    display: block;
+    position: relative; 
+    color: #FF0000; 
+    width: 120px;
+    height: 20px;      
+}
+.EMPTYCELL1
+{
+    top: 25px;
+    left: 140px;
+    z-index: 5;
+}
+.EMPTYCELL2
+{
+    top: 5px;
+    left: 340px;    
+    z-index: 15;
+}
+.EMPTYCELL3
+{
+    top: 5px;
+    left: 39px;   
+    z-index: 1;
+}
+.EMPTYCELL4
+{
+    top: -115px;
+    left: 65px;
+    
+}
+
+.buttonPayPal
+{
+    display: block;
+    position: relative;
+    border-style: none;
+    background-position: center center;
+    background-image: url('../Images3/PayPalImages/ButtonPP.png');
+    background-repeat: no-repeat;
+    top: 100px;
+    left: 15px;
+    width: 130px;
+    height: 28px;
+    font-size: 14;
+    font-family: 'Times New Roman' , Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: normal;
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;/*It works!*/
+}
+/* ----------------------------- ENDPayPal -------------------------------- */
+
+/* -------------------------------- Site.MasterButton -------------------------------- */
+.SiteMasterDONATE
+{
+    background-color: transparent;
+    display: block;
+    position: relative;
+    border-style: none;
+    background-position: center center;
+    background-image: url('../Images3/PayPalImages/ButtonPPDonate.png'); 
+    width: 182px;
+    height: 53px;
+    font-size: 14pt;
+    font-family: 'Times New Roman' , Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: normal;
+    background-repeat: no-repeat;
+    word-spacing: 2em;
+    color: #FF0000;
+    cursor: pointer;
+    left: 10px;
+}
+/* ----------------------------- ENDSite.MasterButton -------------------------------- */
